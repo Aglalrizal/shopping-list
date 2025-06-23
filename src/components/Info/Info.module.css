@@ -1,0 +1,38 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.infoTotal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-font-color);
+  font-size: 12px;
+}
+
+.infoTotal > p {
+  font-weight: bold;
+}
+
+.deleteAllButton {
+  background-color: unset;
+  border: 1px solid var(--danger-font-color);
+  padding: 5px;
+  background-color: var(--danger-font-color);
+  color: var(--secondary-font-color);
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.deleteAllButton:hover {
+  background-color: transparent;
+  border: 1px solid var(--danger-font-color);
+  color: var(--danger-font-color);
+}
