@@ -3,10 +3,10 @@ import plusIcon from "../../assets/plus-icon.svg";
 import minusIcon from "../../assets/minus-icon.svg";
 import PropTypes from "prop-types";
 
-const Todos = (props) => {
+const Todos = ({ todos, onAddition, onSubstraction }) => {
   return (
     <div className={styles.todos}>
-      {props.todos.map((todo, index) => {
+      {todos.map((todo, index) => {
         return (
           <div
             key={index}
@@ -16,14 +16,14 @@ const Todos = (props) => {
             <div className={styles.todoIconWrapper}>
               <button
                 className={styles.todoActionButton}
-                onClick={() => props.onSubstraction(index)}
+                onClick={() => onSubstraction(index)}
               >
                 <img src={minusIcon} alt="minus-icon" />
               </button>
               <div className={styles.todoCount}>{todo.count}</div>
               <button
                 className={styles.todoActionButton}
-                onClick={() => props.onAddition(index)}
+                onClick={() => onAddition(index)}
               >
                 <img src={plusIcon} alt="plus-icon" />
               </button>

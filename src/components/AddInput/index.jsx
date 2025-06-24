@@ -1,15 +1,15 @@
 import styles from "./AddInput.module.css";
 import PropTypes from "prop-types";
 
-const AddInput = (props) => {
+const AddInput = ({ onSubmit, onInput, value }) => {
   return (
-    <form className={styles.form} onSubmit={props.onSubmit}>
+    <form className={styles.form} onSubmit={onSubmit}>
       <input
         type="text"
         className={styles.input}
         placeholder="List"
-        onInput={props.onInput}
-        value={props.value}
+        onInput={onInput}
+        value={value}
         required
       />
       <button className={styles.addButton} type="submit">

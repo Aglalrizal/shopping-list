@@ -1,20 +1,20 @@
 import styles from "./Info.module.css";
 import PropTypes from "prop-types";
 
-const Info = (props) => {
+const Info = ({ total, totalCount, onClick }) => {
   return (
     <div className={styles.info}>
       <div className={styles.infoTotal}>
         <p>
-          Total Item: <span>{props.total}</span>
+          Total Item: <span>{total}</span>
         </p>
       </div>
       <div className={styles.infoTotal}>
         <p>
-          Total Count: <span>{props.totalCount}</span>
+          Total Count: <span>{totalCount}</span>
         </p>
       </div>
-      <button className={styles.deleteAllButton} onClick={props.onClick}>
+      <button className={styles.deleteAllButton} onClick={onClick}>
         Hapus semua
       </button>
     </div>
